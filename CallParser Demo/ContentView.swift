@@ -9,12 +9,26 @@
 import SwiftUI
 
 struct ContentView: View {
+  @State private var callSign = ""
+  
     var body: some View {
-        Text("Hello, World!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+      VStack{
+        HStack{
+          TextField("Enter Call Sign", text: $callSign)
+          .frame(maxWidth: 100)
+          Button(action: {LookupCall()}) {
+            Text("Lookup")
+          }
+        }
+      }
+      
+      
     }
 }
 
+func LookupCall() {
+  
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
