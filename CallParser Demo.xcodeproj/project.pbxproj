@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,23 @@
 		999D86F7248BEFBC0031B407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 999D86F6248BEFBC0031B407 /* Assets.xcassets */; };
 		999D86FA248BEFBC0031B407 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 999D86F9248BEFBC0031B407 /* Preview Assets.xcassets */; };
 		999D86FD248BEFBC0031B407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 999D86FB248BEFBC0031B407 /* Main.storyboard */; };
+		99E5988F248D364B004AFE4C /* CallParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E5988E248D364B004AFE4C /* CallParser.framework */; };
+		99E59890248D364B004AFE4C /* CallParser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99E5988E248D364B004AFE4C /* CallParser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99E59891248D364B004AFE4C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				99E59890248D364B004AFE4C /* CallParser.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		999D86EF248BEFBC0031B407 /* CallParser Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CallParser Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,6 +39,7 @@
 		999D86FC248BEFBC0031B407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		999D86FE248BEFBC0031B407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		999D86FF248BEFBC0031B407 /* CallParser_Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallParser_Demo.entitlements; sourceTree = "<group>"; };
+		99E5988E248D364B004AFE4C /* CallParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CallParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99E5988F248D364B004AFE4C /* CallParser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +59,7 @@
 			children = (
 				999D86F1248BEFBC0031B407 /* CallParser Demo */,
 				999D86F0248BEFBC0031B407 /* Products */,
+				99E5988D248D364B004AFE4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +93,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		99E5988D248D364B004AFE4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99E5988E248D364B004AFE4C /* CallParser.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -84,6 +111,7 @@
 				999D86EB248BEFBC0031B407 /* Sources */,
 				999D86EC248BEFBC0031B407 /* Frameworks */,
 				999D86ED248BEFBC0031B407 /* Resources */,
+				99E59891248D364B004AFE4C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -110,7 +138,7 @@
 				};
 			};
 			buildConfigurationList = 999D86EA248BEFBC0031B407 /* Build configuration list for PBXProject "CallParser Demo" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (

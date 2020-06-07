@@ -5,6 +5,6 @@
       location = "group:../../CallParser/CallParser.xcodeproj">
    </FileRef>
    <FileRef
-      location = "self:">
+      location = "container:">
    </FileRef>
 </Workspace>
