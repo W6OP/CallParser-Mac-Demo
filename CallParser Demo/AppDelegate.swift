@@ -8,16 +8,22 @@
 
 import Cocoa
 import SwiftUI
+import CallParser
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
   var window: NSWindow!
 
-
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     // Create the SwiftUI view that provides the window contents.
+    // Pass in the environment radio instance
+    let callParser = PrefixFileParser()
+    let callLookup = CallLookup(prefixList: callParser.prefixList, childPrefixList: callParser.childPrefixList)
     let contentView = ContentView()
+      .environmentObject(callParser)
+      .environmentObject(callLookup)
+    //let contentView = ContentView()
 
     // Create the window and set the content view. 
     window = NSWindow(
@@ -34,6 +40,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // Insert code here to tear down your application
   }
 
+  func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+      return true
+  }
 
 }
 
