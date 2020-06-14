@@ -19,7 +19,7 @@ extension EnvironmentObject
 struct ContentView: View {
   @EnvironmentObject var callParser: PrefixFileParser
   @EnvironmentObject var callLookup: CallLookup
-  @State private var callSign = ""
+  @State private var callSign = "W6OP"
   
     var body: some View {
       VStack{
