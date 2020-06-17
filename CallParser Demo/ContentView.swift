@@ -39,7 +39,7 @@ func LookupCall(call: String, callLookup: CallLookup) {
   //var callLookup: CallLookup
   
   do {
-  let hitlist: [HitList] = try callLookup.lookupCall(call: call)
+  let hitlist: [Hit] = try callLookup.lookupCall(call: call)
     print(hitlist)
   }
   catch {
