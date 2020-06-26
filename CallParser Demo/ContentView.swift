@@ -20,7 +20,7 @@ struct ContentView: View {
   @EnvironmentObject var callParser: PrefixFileParser
   @EnvironmentObject var callLookup: CallLookup
   @State private var callSign = "W6OP"
-  @State var hitList = [Hit]()
+  @State var prefixDataList = [Hit]()
   
     var body: some View {
       VStack{
@@ -39,7 +39,7 @@ struct ContentView: View {
           Spacer()
         }
         HStack {
-          PrefixDataRow(hitList: hitList).environmentObject(self.callLookup)
+          PrefixDataRow(prefixDataList: prefixDataList).environmentObject(self.callLookup)
           //Spacer().frame(minHeight: 300)
         }
       }.frame(minWidth: 800)
@@ -49,21 +49,21 @@ struct ContentView: View {
 
 struct PrefixDataRow: View {
   @EnvironmentObject var callLookup: CallLookup
-  @State public var hitList: [Hit]
+  @State public var prefixDataList: [Hit]
 
     var body: some View {
       
       ScrollView {
       VStack {
-       ForEach(callLookup.hitList, id: \.self) { hit in
+       ForEach(callLookup.prefixDataList, id: \.self) { hit in
           HStack {
             Text(hit.call)
-            .frame(minWidth: 75, maxWidth: 75, alignment: .leading)
+            .frame(minWidth: 90, alignment: .leading)
             .padding()
             Divider()
             
             Text(hit.kind.rawValue)
-              .frame(minWidth: 65, maxWidth: 65, alignment: .leading)
+              .frame(minWidth: 65, alignment: .leading)
             .padding()
              Divider()
             
@@ -83,7 +83,7 @@ struct PrefixDataRow: View {
           
           }.frame(maxHeight: 10)
         }//.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 500)
-      }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 500, alignment: .topLeading)
+      }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 500, maxHeight: 500, alignment: .topLeading)
     }
   }
 }
