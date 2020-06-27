@@ -9,17 +9,17 @@
 import SwiftUI
 import CallParser
 
-extension EnvironmentObject
-{
-  var safeToUse: Bool {
-    return (Mirror(reflecting: self).children.first(where: { $0.label == "_store"})?.value as? ObjectType) != nil
-  }
-}
+//extension EnvironmentObject
+//{
+//  var safeToUse: Bool {
+//    return (Mirror(reflecting: self).children.first(where: { $0.label == "_store"})?.value as? ObjectType) != nil
+//  }
+//}
 
 struct ContentView: View {
   @EnvironmentObject var callParser: PrefixFileParser
   @EnvironmentObject var callLookup: CallLookup
-  @State private var callSign = "W6OP"
+  @State private var callSign = ""
   @State var prefixDataList = [Hit]()
   
     var body: some View {
@@ -40,7 +40,6 @@ struct ContentView: View {
         }
         HStack {
           PrefixDataRow(prefixDataList: prefixDataList).environmentObject(self.callLookup)
-          //Spacer().frame(minHeight: 300)
         }
       }.frame(minWidth: 800)
     }
@@ -90,7 +89,7 @@ struct PrefixDataRow: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+      ContentView()
     }
 }
 
