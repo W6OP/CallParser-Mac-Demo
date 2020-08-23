@@ -33,7 +33,13 @@ struct ContentView: View {
           Spacer()
         }
         HStack {
-          Button(action: {_ = loadCompoundFile(callLookup: self.callLookup)}) {
+          Button(action: {loadCompoundFile(callLookup: self.callLookup)}) {
+            Text("Load Batch File")
+          }
+          Spacer()
+        }
+        HStack {
+          Button(action: {_ = runBatchjob(callLookup: self.callLookup)}) {
             Text("Run Batch Job")
           }
           Spacer()
@@ -90,6 +96,8 @@ struct PrefixDataRow: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
       ContentView()
+      .environmentObject(PrefixFileParser())
+      .environmentObject(CallLookup())
     }
 }
 
@@ -103,9 +111,13 @@ func lookupCall(call: String, callLookup: CallLookup) -> [Hit] {
   
 }
 
-func loadCompoundFile(callLookup: CallLookup) -> [Hit] {
+func loadCompoundFile(callLookup: CallLookup) {
   
-  return callLookup.loadCompoundFile()
+  callLookup.loadCompoundFile()
 
+}
+
+func runBatchjob(callLookup: CallLookup){
+  _ = callLookup.runBatchJob()
 }
 
