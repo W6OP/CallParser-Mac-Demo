@@ -118,6 +118,10 @@ func loadCompoundFile(callLookup: CallLookup) {
 }
 
 func runBatchjob(callLookup: CallLookup){
-  _ = callLookup.runBatchJob()
+  let batchQueue = DispatchQueue(label: "com.w6op.batchqueue", qos: .utility, attributes: .concurrent)
+  
+   batchQueue.sync {
+      _ = callLookup.runBatchJob()
+  }
 }
 
