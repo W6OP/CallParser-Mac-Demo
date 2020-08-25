@@ -39,7 +39,7 @@ struct ContentView: View {
           Spacer()
         }
         HStack {
-          Button(action: {_ = runBatchjob(callLookup: self.callLookup)}) {
+          Button(action: {runBatchjob(callLookup: self.callLookup)}) {
             Text("Run Batch Job")
           }
           Spacer()
@@ -117,10 +117,11 @@ func loadCompoundFile(callLookup: CallLookup) {
 
 }
 
+ let batchQueue = DispatchQueue(label: "com.w6op.batchqueue", qos: .utility, attributes: .concurrent)
+
 func runBatchjob(callLookup: CallLookup){
-  let batchQueue = DispatchQueue(label: "com.w6op.batchqueue", qos: .utility, attributes: .concurrent)
-  
-   batchQueue.sync {
+ 
+   batchQueue.async {
       _ = callLookup.runBatchJob()
   }
 }
