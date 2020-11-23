@@ -7,28 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9965F691256C1356007F9A9E /* CallParser in Frameworks */ = {isa = PBXBuildFile; productRef = 9965F690256C1356007F9A9E /* CallParser */; };
 		999D86F3248BEFBC0031B407 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999D86F2248BEFBC0031B407 /* AppDelegate.swift */; };
 		999D86F5248BEFBC0031B407 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999D86F4248BEFBC0031B407 /* ContentView.swift */; };
 		999D86F7248BEFBC0031B407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 999D86F6248BEFBC0031B407 /* Assets.xcassets */; };
 		999D86FA248BEFBC0031B407 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 999D86F9248BEFBC0031B407 /* Preview Assets.xcassets */; };
 		999D86FD248BEFBC0031B407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 999D86FB248BEFBC0031B407 /* Main.storyboard */; };
-		99E5988F248D364B004AFE4C /* CallParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E5988E248D364B004AFE4C /* CallParser.framework */; };
-		99E59890248D364B004AFE4C /* CallParser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99E5988E248D364B004AFE4C /* CallParser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		99E59891248D364B004AFE4C /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				99E59890248D364B004AFE4C /* CallParser.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		999D86EF248BEFBC0031B407 /* CallParser Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CallParser Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,7 +24,6 @@
 		999D86FC248BEFBC0031B407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		999D86FE248BEFBC0031B407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		999D86FF248BEFBC0031B407 /* CallParser_Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallParser_Demo.entitlements; sourceTree = "<group>"; };
-		99E5988E248D364B004AFE4C /* CallParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CallParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99E5988F248D364B004AFE4C /* CallParser.framework in Frameworks */,
+				9965F691256C1356007F9A9E /* CallParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +80,6 @@
 		99E5988D248D364B004AFE4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				99E5988E248D364B004AFE4C /* CallParser.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,13 +94,15 @@
 				999D86EB248BEFBC0031B407 /* Sources */,
 				999D86EC248BEFBC0031B407 /* Frameworks */,
 				999D86ED248BEFBC0031B407 /* Resources */,
-				99E59891248D364B004AFE4C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "CallParser Demo";
+			packageProductDependencies = (
+				9965F690256C1356007F9A9E /* CallParser */,
+			);
 			productName = "CallParser Demo";
 			productReference = 999D86EF248BEFBC0031B407 /* CallParser Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -129,7 +114,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Peter Bourget";
 				TargetAttributes = {
 					999D86EE248BEFBC0031B407 = {
@@ -146,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 999D86E6248BEFBC0031B407;
+			packageReferences = (
+				9965F68F256C1356007F9A9E /* XCRemoteSwiftPackageReference "CallParserForMac" */,
+			);
 			productRefGroup = 999D86F0248BEFBC0031B407 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -218,6 +206,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -278,6 +267,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -300,7 +290,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
-				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Release;
@@ -323,6 +312,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.w6op.CallParser-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -347,6 +337,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.w6op.CallParser-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -375,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9965F68F256C1356007F9A9E /* XCRemoteSwiftPackageReference "CallParserForMac" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/W6OP/CallParserForMac.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9965F690256C1356007F9A9E /* CallParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9965F68F256C1356007F9A9E /* XCRemoteSwiftPackageReference "CallParserForMac" */;
+			productName = CallParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 999D86E7248BEFBC0031B407 /* Project object */;
 }
