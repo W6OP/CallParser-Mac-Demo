@@ -19,6 +19,7 @@ import CallParser
 struct ContentView: View {
   @EnvironmentObject var callParser: PrefixFileParser
   @EnvironmentObject var callLookup: CallLookup
+  @EnvironmentObject var callParser2: PrefixFileParser2
   @State private var callSign = ""
   @State var prefixDataList = [Hit]()
   
@@ -29,6 +30,10 @@ struct ContentView: View {
           .frame(maxWidth: 100)
           Button(action: {_ = lookupCall(call: self.callSign, callLookup: self.callLookup)}) {
             Text("Lookup")
+          }
+          Spacer()
+          Button(action: {callParser2.expandGroup(mask: "L[1-9O-W]#[DE]")}) {
+            Text("Lookup2")
           }
           Spacer()
         }
@@ -98,6 +103,7 @@ struct ContentView_Previews: PreviewProvider {
       ContentView()
       .environmentObject(PrefixFileParser())
       .environmentObject(CallLookup())
+        .environmentObject(PrefixFileParser2())
     }
 }
 
