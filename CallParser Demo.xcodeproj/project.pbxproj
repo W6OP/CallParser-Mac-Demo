@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9947F44026389C7C00B7EEE2 /* CallParserForMac */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CallParserForMac; path = ../Packages/CallParserForMac; sourceTree = "<group>"; };
 		999D86EF248BEFBC0031B407 /* CallParser Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CallParser Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		999D86F2248BEFBC0031B407 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		999D86F4248BEFBC0031B407 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +44,7 @@
 		999D86E6248BEFBC0031B407 = {
 			isa = PBXGroup;
 			children = (
+				9947F44026389C7C00B7EEE2 /* CallParserForMac */,
 				999D86F1248BEFBC0031B407 /* CallParser Demo */,
 				999D86F0248BEFBC0031B407 /* Products */,
 				99E5988D248D364B004AFE4C /* Frameworks */,
