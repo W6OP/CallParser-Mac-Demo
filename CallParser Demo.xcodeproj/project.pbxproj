@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		992191EC26B2FD4C00374D25 /* CallParser_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992191EB26B2FD4C00374D25 /* CallParser_DemoTests.swift */; };
 		99726E70263773A800EE0B88 /* CallParser in Frameworks */ = {isa = PBXBuildFile; productRef = 99726E6F263773A800EE0B88 /* CallParser */; };
 		999D86F3248BEFBC0031B407 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999D86F2248BEFBC0031B407 /* AppDelegate.swift */; };
 		999D86F5248BEFBC0031B407 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999D86F4248BEFBC0031B407 /* ContentView.swift */; };
@@ -16,7 +17,20 @@
 		99C509E026360D0000720475 /* Extends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C509DF26360D0000720475 /* Extends.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		992191EE26B2FD4C00374D25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 999D86E7248BEFBC0031B407 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 999D86EE248BEFBC0031B407;
+			remoteInfo = "CallParser Demo";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		992191E926B2FD4C00374D25 /* CallParser DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CallParser DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		992191EB26B2FD4C00374D25 /* CallParser_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallParser_DemoTests.swift; sourceTree = "<group>"; };
+		992191ED26B2FD4C00374D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9947F44026389C7C00B7EEE2 /* CallParserForMac */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CallParserForMac; path = ../Packages/CallParserForMac; sourceTree = "<group>"; };
 		999D86EF248BEFBC0031B407 /* CallParser Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CallParser Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		999D86F2248BEFBC0031B407 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +44,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		992191E626B2FD4C00374D25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		999D86EC248BEFBC0031B407 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,11 +62,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		992191EA26B2FD4C00374D25 /* CallParser DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				992191EB26B2FD4C00374D25 /* CallParser_DemoTests.swift */,
+				992191ED26B2FD4C00374D25 /* Info.plist */,
+			);
+			path = "CallParser DemoTests";
+			sourceTree = "<group>";
+		};
 		999D86E6248BEFBC0031B407 = {
 			isa = PBXGroup;
 			children = (
 				9947F44026389C7C00B7EEE2 /* CallParserForMac */,
 				999D86F1248BEFBC0031B407 /* CallParser Demo */,
+				992191EA26B2FD4C00374D25 /* CallParser DemoTests */,
 				999D86F0248BEFBC0031B407 /* Products */,
 				99E5988D248D364B004AFE4C /* Frameworks */,
 			);
@@ -55,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				999D86EF248BEFBC0031B407 /* CallParser Demo.app */,
+				992191E926B2FD4C00374D25 /* CallParser DemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +124,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		992191E826B2FD4C00374D25 /* CallParser DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 992191F026B2FD4C00374D25 /* Build configuration list for PBXNativeTarget "CallParser DemoTests" */;
+			buildPhases = (
+				992191E526B2FD4C00374D25 /* Sources */,
+				992191E626B2FD4C00374D25 /* Frameworks */,
+				992191E726B2FD4C00374D25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				992191EF26B2FD4C00374D25 /* PBXTargetDependency */,
+			);
+			name = "CallParser DemoTests";
+			productName = "CallParser DemoTests";
+			productReference = 992191E926B2FD4C00374D25 /* CallParser DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		999D86EE248BEFBC0031B407 /* CallParser Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 999D8702248BEFBC0031B407 /* Build configuration list for PBXNativeTarget "CallParser Demo" */;
@@ -118,10 +168,14 @@
 		999D86E7248BEFBC0031B407 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1220;
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Peter Bourget";
 				TargetAttributes = {
+					992191E826B2FD4C00374D25 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 999D86EE248BEFBC0031B407;
+					};
 					999D86EE248BEFBC0031B407 = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -144,11 +198,19 @@
 			projectRoot = "";
 			targets = (
 				999D86EE248BEFBC0031B407 /* CallParser Demo */,
+				992191E826B2FD4C00374D25 /* CallParser DemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		992191E726B2FD4C00374D25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		999D86ED248BEFBC0031B407 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,6 +224,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		992191E526B2FD4C00374D25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992191EC26B2FD4C00374D25 /* CallParser_DemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		999D86EB248BEFBC0031B407 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,6 +243,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		992191EF26B2FD4C00374D25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 999D86EE248BEFBC0031B407 /* CallParser Demo */;
+			targetProxy = 992191EE26B2FD4C00374D25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		999D86FB248BEFBC0031B407 /* Main.storyboard */ = {
@@ -186,6 +264,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		992191F126B2FD4C00374D25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JE278GX57V;
+				INFOPLIST_FILE = "CallParser DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.w6op.CallParser-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallParser Demo.app/Contents/MacOS/CallParser Demo";
+			};
+			name = Debug;
+		};
+		992191F226B2FD4C00374D25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JE278GX57V;
+				INFOPLIST_FILE = "CallParser DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.w6op.CallParser-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallParser Demo.app/Contents/MacOS/CallParser Demo";
+			};
+			name = Release;
+		};
 		999D8700248BEFBC0031B407 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -297,6 +418,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Release;
@@ -354,6 +476,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		992191F026B2FD4C00374D25 /* Build configuration list for PBXNativeTarget "CallParser DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				992191F126B2FD4C00374D25 /* Debug */,
+				992191F226B2FD4C00374D25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		999D86EA248BEFBC0031B407 /* Build configuration list for PBXProject "CallParser Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

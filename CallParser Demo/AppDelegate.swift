@@ -42,7 +42,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // Create the SwiftUI view that provides the window contents.
     // Pass in the environment radio instance
     let callParser = PrefixFileParser()
-    //let callParser2 = PrefixFileParser2()
     let callLookup = CallLookup(prefixFileParser: callParser)
     let contentView = ContentView()
       .environmentObject(callParser)

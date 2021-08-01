@@ -66,7 +66,7 @@ struct PrefixDataRow: View {
       
       ScrollView {
       VStack {
-       ForEach(callLookup.prefixDataList, id: \.self) { hit in
+       ForEach(callLookup.hitList, id: \.self) { hit in
           HStack {
             Text(hit.call)
             .frame(minWidth: 90, alignment: .leading)
