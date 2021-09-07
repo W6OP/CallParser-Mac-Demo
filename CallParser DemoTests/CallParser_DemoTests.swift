@@ -49,9 +49,9 @@ class CallParser_DemoTests: XCTestCase {
       var expected: Int
 
       // Add calls where mask ends with '.' ie: KG4AA and as compare KG4AAA
-       let testCallSigns = ["TX9", "TX4YKP/R", "/KH0PR", "W6OP/4", "OEM3SGU/3", "AM70URE/8", "5N31/OK3CLA", "BV100", "BY1PK/VE6LB", "VE6LB/BY1PK", "DC3RJ/P/W3", "RAEM", "AJ3M/BY1RX", "4D71/N0NM"]
+       let testCallSigns = ["TX9", "TX4YKP/R", "/KH0PR", "W6OP/4", "OEM3SGU/3", "AM70URE/8", "5N31/OK3CLA", "BV100", "BY1PK/VE6LB", "VE6LB/BY1PK", "DC3RJ/P/W3", "RAEM", "AJ3M/BY1RX", "4D71/N0NM", "OEM3SGU"]
 
-      let testResult = [0,7,1,1,1,1,1,0,0,1,1,0,1,1]
+      let testResult = [0, 7, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1]
 
       for (index, callSign) in testCallSigns.enumerated() {
         result = callLookup.lookupCall(call: callSign)
