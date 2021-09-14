@@ -52,7 +52,7 @@ class CallParser_DemoTests: XCTestCase {
     var expected: (Int, String)
     var isMatchFound = false
 
-    for (index, callSign) in goodDataCheck.keys.enumerated() {
+    for (_, callSign) in goodDataCheck.keys.enumerated() {
 
       result = callLookup.lookupCall(call: callSign)
 

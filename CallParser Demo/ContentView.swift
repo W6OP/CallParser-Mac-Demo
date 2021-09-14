@@ -19,7 +19,6 @@ import CallParser
 struct ContentView: View {
   @EnvironmentObject var callParser: PrefixFileParser
   @EnvironmentObject var callLookup: CallLookup
-  //@EnvironmentObject var callParser2: PrefixFileParser2
   @State private var callSign = ""
   @State var prefixDataList = [Hit]()
   
@@ -66,7 +65,7 @@ struct PrefixDataRow: View {
       
       ScrollView {
       VStack {
-       ForEach(callLookup.hitList, id: \.self) { hit in
+       ForEach(callLookup.publishedHitList, id: \.self) { hit in
           HStack {
             Text(hit.call)
             .frame(minWidth: 90, alignment: .leading)
@@ -129,7 +128,7 @@ func loadCompoundFile(callLookup: CallLookup) {
 func runBatchjob(callLookup: CallLookup){
  
    batchQueue.async {
-      _ = callLookup.runBatchJob()
+    _ = callLookup.runBatchJob()
   }
 }
 
